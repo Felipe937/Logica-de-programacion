@@ -1,0 +1,72 @@
+package calculadora;
+import java.util.Scanner;
+public class Calculadora {
+
+public static void main(String[] args) {
+ Scanner obj = new Scanner(System.in);
+int Numero1;
+int Numero2;
+int Numero3;
+int Numero4;
+int Numero5;
+int Numero6; 
+int Numero7;
+int Numero8;
+int Numero9;
+int Numero10;
+int Numero11;
+int Numero12;
+int Resultado;
+       
+System.out.println("Ingresar primer numero");
+Numero1 = obj.nextInt();
+       
+System.out.println("Ingresar segundo numero");
+Numero2 = obj.nextInt();
+       
+System.out.println("Ingresar tercer numero");
+Numero3 = obj.nextInt();
+       
+System.out.println("Ingresar cuarto numero");
+Numero4 = obj.nextInt();
+       
+System.out.println("Ingresar quinto numero");
+Numero5 = obj.nextInt();
+       
+System.out.println("Ingresar sexto numero");
+Numero6 = obj.nextInt();
+       
+System.out.println("Ingresar septimo numero");
+Numero7 = obj.nextInt();
+
+System.out.println("Ingresar octavo numero");
+Numero8 = obj.nextInt();
+       
+System.out.println("Ingresar numero que quiera su raiz cuadrada");
+Numero9 = obj.nextInt();
+
+System.out.println("Ingresar numero de la base de su potencia");
+Numero10 = obj.nextInt();
+       
+System.out.println("Ingresar numero del exponente de su potencia");
+Numero11 = obj.nextInt();
+       
+int Resultadosuma; 
+Resultadosuma = Numero1 + Numero2;
+int Resultadoresta;
+Resultadoresta = Numero3 - Numero4;
+int Resultadomultiplicacion;
+Resultadomultiplicacion = Numero5 * Numero6;
+int Resultadodivision;
+Resultadodivision = Numero7 / Numero8;
+double Raiz = Math.sqrt(Numero9);
+int resultadopotencia;
+double Resultadopotencia = Math.pow(Numero10, Numero11);
+      
+System.out.println("El resultado de la suma: "+Resultadosuma);
+System.out.println("El resultado de la resta: "+Resultadoresta);
+System.out.println("El resultado de la multiplicacion: "+Resultadomultiplicacion);
+System.out.println("El resultado de la division: "+Resultadodivision);
+System.out.println("El resultado de la raiz: "+Raiz);
+System.out.println("El resultado de la potencia: "+Resultadopotencia);
+}
