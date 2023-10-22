@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Clase1{
+public static void main(String[] args) {
+// TODO code application logic here
+Scanner sc = new Scanner(System.in);
+String nombre;
+int nhoras, vhora;
+double salneto=0, salbruto=0, deduc=0, tasa=0;
+
+System.out.print("Digite su nombre");
+nombre = sc.next();
+
+System.out.print("Digite el número de horas trabajadas");
+nhoras = sc.nextInt();
+
+System.out.print("Digite el salario por hora");
+vhora = sc.nextInt();
+
+System.out.print("Digite la taza de impiuestos");
+tasa = sc.nextInt();
+
+salbruto= nhoras*vhora;
+deduc= tasa/100;
+
+salneto= salbruto-(salbruto*deduc);
+
+System.out.println("Estimado/a " +nombre+ " su salario bruto es " +salbruto+ "." );
+System.out.println("Estimado/a " +nombre+ " su salario neto es " +salneto+ "." );
+System.out.println("Estimado/a " +nombre+ " su total de deducciones es " +salbruto*deduc+ "." );
+}
+}
