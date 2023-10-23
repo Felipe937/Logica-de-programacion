@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Multiplos1 {
+public static void main(String[] args) {
+ Scanner entrada = new Scanner(System.in);
+ String Resultado="";
+ System.out.println("Ingresar numero: ");
+ int Inicio= entrada.nextInt();
+ System.out.println("Multiplos de "+Inicio+" desde el 0 hasta : ");
+ int hasta = entrada.nextInt();
+ for(int i = 0; i < hasta ; i++){
+ if(i%Inicio==0){
+ Resultado = Resultado+i+"\n";
+ }
+ }
+ System.out.println("Resultado: ");
+ System.out.println(Resultado);
+ }
+}
