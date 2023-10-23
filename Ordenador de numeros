@@ -1,0 +1,30 @@
+ import java.util.Scanner;
+
+public class Codigos3{
+
+    public static void main(String[] args) {
+     Scanner entrada = new Scanner(System.in);
+     int aux= 0;
+     int n=0;
+     System.out.print("Cuantos numeros desea ingresar?");
+     n= (int) entrada.nextFloat();
+     int a[] = new int [n];
+     for(int c=0;c <n;c++){
+         System.out.println("Ingrese numero" +(c+1)+" de "+n+": ");
+         a [c] = (int) entrada.nextFloat();
+     }
+     System.out.println("\nNumeros ordenados\n\n");
+     for(int c=0;c<(n-1);c++){
+         for(int b=(c+1);b<n;b++){
+             if (a[c]>a[b]){
+                 aux=a[c];
+                 a[c]=a[b];
+                 a[b]=aux;
+             }
+         }
+     }
+     for(int c=0;c <n;c++){
+         System.out.println (a [c]+"");
+     }
+    }
+}
