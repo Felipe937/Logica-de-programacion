@@ -1,0 +1,93 @@
+import javax.swing.JOptionPane;
+
+public class NumeroAleatorios {
+    public static void main(String[] args) {
+        int F, E, L, I, P;
+        int Num, contador = 0, contador2 = 0;
+        
+        F = (int) (Math.random() * 43) + 1;
+        E = (int) (Math.random() * 43) + 1;
+        L = (int) (Math.random() * 43) + 1;
+        I = (int) (Math.random() * 43) + 1;
+        P = (int) (Math.random() * 43) + 1;
+        
+        do {
+            Num = Integer.parseInt(JOptionPane.showInputDialog("Pon un número del 1 al 43:"));
+            
+            if (F > Num) {
+                System.out.println("Dame un número mayor.");
+            } else if (F < Num) {
+                System.out.println("Dame un número menor.");
+            } else {
+                System.out.println("El número " + F + " coincidió.");
+            }
+            
+            contador++;
+            contador2++;
+        } while (Num != F);
+        
+        System.out.println("\n¡Genial! Adivinaste el número en " + contador + " intentos.");
+        
+        do {
+            Num = Integer.parseInt(JOptionPane.showInputDialog("Pon un número:"));
+            
+            if (E > Num) {
+                System.out.println("Dame un número mayor.");
+            } else if (E < Num) {
+                System.out.println("Dame un número menor.");
+            } else {
+                System.out.println("El número " + E + " coincidió.");
+            }
+            contador++;
+            contador2++;
+        } while (Num != E);
+        System.out.println("\n¡Genial! Adivinaste el número en " + contador + " intentos.");
+        
+        do {
+            Num = Integer.parseInt(JOptionPane.showInputDialog("Pon un número:"));
+            
+            if (L > Num) {
+                System.out.println("Dame un número mayor.");
+            } else if (L < Num) {
+                System.out.println("Dame un número menor.");
+            } else {
+                System.out.println("El número " + L + " coincidió.");
+            }
+            contador++;
+            contador2++;
+        } while (Num != L);
+        System.out.println("\n¡Genial! Adivinaste el número en " + contador + " intentos.");
+        
+        do {
+            Num = Integer.parseInt(JOptionPane.showInputDialog("Pon un número:"));
+            
+            if (I > Num) {
+                System.out.println("Dame un número mayor.");
+            } else if (I < Num) {
+                System.out.println("Dame un número menor.");
+            } else {
+                System.out.println("El número " + I + " coincidió.");
+            }
+            
+            contador++;
+            contador2++;
+        } while (Num != I);
+        
+        System.out.println("\n¡Genial! Adivinaste el número en " + contador + " intentos.");
+        
+        do {
+            Num = Integer.parseInt(JOptionPane.showInputDialog("Pon un número:"));
+            if (P > Num) {
+                System.out.println("Dame un número mayor.");
+            } else if (P < Num) {
+                System.out.println("Dame un número menor.");
+            } else {
+                System.out.println("El número " + P + " coincidió.");
+            }
+            contador++;
+            contador2++;
+        } while (Num != P);
+        System.out.println("\n¡Genial! Adivinaste el número en " + contador + " intentos.");
+        System.out.println("El baloto ganador es: " + F + " " + E + " " + L + " " + I + " " + P);
+    }
+}
