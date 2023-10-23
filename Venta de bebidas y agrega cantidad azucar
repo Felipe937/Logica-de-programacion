@@ -1,0 +1,64 @@
+public class Codigo4 {
+
+    public static void main(String[] args) {
+        Scanner entradaEscaner = new Scanner(System.in);
+        String opcion, opcion2;
+        System.out.println("Bienvenido a nuestro servicio de bebidas");
+        System.out.println("En nuestro menú tenemos 5 bebidas:");
+        System.out.println("(1) Aguadepanela, (2) Jugo de mango, (3) Tinto, (4) Aromática y (5) Café");
+        System.out.println("Adicionalmente, también podemos agregarle azúcar a su bebida");
+        System.out.println("(1) 1 gramo, (2) 2 gramos, (3) 3 gramos, (4) 4 gramos y (5) 5 gramos");
+        System.out.println("Si desea alguna de estas bebidas, digite un número del 1 al 5 para ordenarla");
+        System.out.println("Si desea añadirle azúcar a su bebida, digite un número del 1 al 5");
+        System.out.println("O presione 6 para no colocar azúcar a su bebida");
+
+        opcion = entradaEscaner.nextLine();
+        opcion2 = entradaEscaner.nextLine();
+
+        switch (opcion) {
+            case "1":
+                System.out.println("Agua de panela");
+                break;
+            case "2":
+                System.out.println("Jugo de mango");
+                break;
+            case "3":
+                System.out.println("Tinto");
+                break;
+            case "4":
+                System.out.println("Aromática");
+                break;
+            case "5":
+                System.out.println("Café");
+                break;
+            default:
+                System.out.println("Digitó un número fuera del rango");
+                break;
+        }
+        switch (opcion2) {
+            case "1":
+                System.out.println("Con 1 gramo de azúcar");
+                break;
+            case "2":
+                System.out.println("Con 2 gramos de azúcar");
+                break;
+            case "3":
+                System.out.println("Con 3 gramos de azúcar");
+                break;
+            case "4":
+                System.out.println("Con 4 gramos de azúcar");
+                break;
+            case "5":
+                System.out.println("Con 5 gramos de azúcar");
+                break;
+            case "6":
+                System.out.println("Sin azúcar");
+                break;
+            default:
+                System.out.println("Digitó un número fuera del rango");
+                break;
+        }
+        System.out.println("Gracias por ordenar");
+        System.out.println("Que tenga buen día");
+    }
+}
