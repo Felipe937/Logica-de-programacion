@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Listapar {
+
+ public static void main(String[] args) {
+ Scanner entrada = new Scanner(System.in);
+ int Numero=1;
+ do{
+ if(Numero%2<=0){
+ System.out.println(+Numero+ " Es par ");
+ }
+ else{
+ System.out.println(+Numero+" Es impar ");
+ }
+ Numero++;
+ }
+ while(Numero <= 10);
+ }
+ }
