@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class listaimpa {
+
+ public static void main(String[] args) {
+ Scanner entrada = new Scanner(System.in);
+ int impa=1;
+ int contador=0;
+ System.out.print("Ingrese la cantidad de numeros impares que quiere");
+ int numero = entrada.nextInt();
+
+ while(numero !=0){
+ impa = impa +2;
+ numero= numero-1;
+ contador++;
+ System.out.print("El "+contador+ " numero impar es: "+impa+" .");
+ }
+
+ }
+}
