@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class SequenceCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el valor de n: ");
+        int n = scanner.nextInt();
+        
+        System.out.println("Sucesión n(n+3)/2:");
+        for (int i = 1; i <= n; i++) {
+            int result = calculateSequence(i);
+            System.out.println(i + "(" + i + " + 3)/2 = " + result);
+        }
+    }
+    
+    public static int calculateSequence(int n) {
+        return (n * (n + 3)) / 2;
+    }
+}
