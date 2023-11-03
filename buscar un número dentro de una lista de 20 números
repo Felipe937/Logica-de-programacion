@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class BuscarNumero {
+
+    public static void main(String[] args) {
+        List<Integer> numeros = obtenerNumerosDelUsuario(20);
+        int numeroBuscado = obtenerNumeroBuscadoDelUsuario();
+        int cantidadVecesEncontrado = contarNumero(numeros, numeroBuscado);
+
+        System.out.println("El número " + numeroBuscado + " se encontró " + cantidadVecesEncontrado + " veces en la lista.");
+    }
+
+    private static List<Integer> obtenerNumerosDelUsuario(int cantidad) {
+        List<Integer> numeros = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresa " + cantidad + " números:");
+
+        for (int i = 0; i < cantidad; i++) {
+            int numero = scanner.nextInt();
+            numeros.add(numero);
+        }
+
+        return numeros;
+    }
+
+    private static int obtenerNumeroBuscadoDelUsuario() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresa el número que deseas buscar:");
+        int numeroBuscado = scanner.nextInt();
+
+        return numeroBuscado;
+    }
+
+    private static int contarNumero(List<Integer> numeros, int numeroBuscado) {
+        int contador = 0;
+
+        for (Integer numero : numeros) {
+            if (numero == numeroBuscado) {
+                contador++;
+            }
+        }
+
+        return contador;
+    }
+}
