@@ -1,0 +1,34 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class SchoolSupplies {
+    public static void main(String[] args) {
+        Map<String, Double> schoolSupplies = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the school supplies and their prices (separated by a space), or type 'done' to finish:");
+
+        while (true) {
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("done")) {
+                break;
+            }
+            String[] parts = input.split(" ");
+            if (parts.length == 2) {
+                String supply = parts[0];
+                double price = Double.parseDouble(parts[1]);
+                schoolSupplies.put(supply, price);
+            } else {
+                System.out.println("Invalid input. Please try again.");
+            }
+        }
+
+        System.out.println("School supplies and their prices:");
+        for (Map.Entry<String, Double> entry : schoolSupplies.entrySet()) {
+            System.out.println(entry.getKey() + ": $" + entry.getValue());
+        }
+
+        scanner.close();
+    }
+}
